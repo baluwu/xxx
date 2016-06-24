@@ -1,10 +1,11 @@
 body {
-    background-image: url('../image/t-bk.jpg');
-    //background-color: #373E46; 
+    //background-image: url('../image/t-bk.jpg');
+    background-color: #fff;
     padding: 0;
     margin: 0;
     font-size: 12px;
     font-family: "微软雅黑";
+    overflow: hidden;
 }
 .color-1 { color: #E54B4D; }
 .color-2 { color: #1abc9c; }
@@ -19,9 +20,7 @@ body {
 .iconfont { font-size: 18px; }
 .t-t {
     font-size: 20px;
-    color: #fff;
     height: 56px;
-    overflow: auto;
     line-height: 56px;
     margin-left: 20px;
 }
@@ -46,6 +45,8 @@ body {
     top: 0; 
     right: 0;
     left: 200px;
+    overflow: auto;
+    height: 1080px;
 }
 .t-tab ul { 
     margin: 10px 0 0 0; padding: 0; 
@@ -85,8 +86,7 @@ body {
     border-color: #aaa;
 }
 .t-cnt {
-    height: 880px;
-    min-width: 800px;
+    height: 1080px;
     position: absolute;
     top: 56px;
     right: 30px;
@@ -108,7 +108,7 @@ body {
     margin: 0 auto;
     padding: 0.5em 0;
     list-style-type: none;
-    color: #fff;
+    color: #222;
 }
 .l-tl:before {
     position: absolute;
@@ -173,7 +173,10 @@ body {
     color: rgba(248,248,248, .35);
     margin-right: 5px;
 }
-
+.x-grid tbody tr td:nth-child(n+8) {
+    font-weight: 400;
+    color: #333;
+}
 
 
 
