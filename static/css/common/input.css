@@ -1,0 +1,25 @@
+.m-ipt {
+    width: 250px;
+    font-size: 14px;
+    padding: 2px 5px;
+    height: 30px;
+    border: 1px solid #cecece;
+    line-height: 28px;
+}
+.i-search {
+    margin-left: -41px;
+    color: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background: #4285f4;
+    background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+    background: linear-gradient(top,#4387fd,#4683ea);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4387fd,endColorstr=#4683ea,GradientType=1);
+}
+.i-search:hover {
+    background: #4285f4;
+    background: -webkit-linear-gradient(top,#4683ea,#6fa0f7);
+    background: linear-gradient(top,#4683ea,#6fa0f7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4683ea,endColorstr=#6fa0f7,GradientType=1);
+}
+

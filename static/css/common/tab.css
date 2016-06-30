@@ -1,0 +1,61 @@
+.t-tab {
+    position: absolute;
+    top: 7px;
+    left: 200px;
+    min-width: 1080px;
+}
+.t-tab ul { 
+    padding: 0; 
+}
+.t-tab ul li {
+    min-width: 120px;
+    list-style: none;
+    float: left;
+    padding: 8px 10px;
+    border-top: 1px solid #d7d7d7;
+    background-color: rgba(243,243,243,.85);
+    height: 20px;
+    overflow: hidden;
+    border-left: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+    color: #666;
+    font-size: 16px;
+    display: inline-block;
+}
+.t-tab ul li i {
+    margin-right: 5px;
+}
+.t-tab ul li i.icon-guanbi1 {
+    float: right;
+    color: rgba(243,243,243,.95);
+}
+.t-tab ul li:hover i.icon-guanbi1 {
+    font-weight: 700;
+    color: #4285f4;
+}
+.t-tab ul li.dashboard {
+    border-top-left-radius: 8px;
+    width: 60px;
+    min-width: 60px;
+}
+.t-tab ul li.t-tab-active {
+    border-top: 2px solid #16a765;
+    background-color: rgba(255,255,255,.95);
+    border-bottom-color: rgba(255,255,255,.1);
+    border-bottom: none;
+    color: #333;
+    font-weight: 700;
+}
+.t-tab ul li.l-add { 
+    min-width: 14px; 
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid #dedede;
+    cursor: pointer;
+    font-weight: 700;
+    color: #888;
+}
+.t-tab ul li:hover {
+    background-color: rgba(255,255,255,.90);
+}
+

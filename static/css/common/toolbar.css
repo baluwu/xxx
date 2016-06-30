@@ -1,0 +1,22 @@
+.t-bar {
+    position: absolute;
+    white-space: nowrap;
+    top: 15px;
+    left: 0;
+    right: 30px;
+    z-index: 2;
+    margin-bottom: 10px;
+}
+.t-bar .left-bar {
+    float: left;
+}
+.t-bar .right-bar {
+    float: none;
+    text-align: right;
+    display: block;
+}
+.t-bar .h-split {
+    color: #f1f1f1;
+    display: inline-block;
+    vertical-align: middle;
+}

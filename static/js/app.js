@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: '//s1.xxx.com/',
+    baseUrl: '//120.24.5.57/js',
     paths: {
         'jquery': 'lib/jquery/3.0.0/jquery.min',
     }

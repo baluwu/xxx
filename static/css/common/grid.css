@@ -1,12 +1,11 @@
 .x-grid {
     width: 100%;
-    margin-top: 10px;
-    font-size: 90%;
+    min-width: 1024px;
+    font-size: 12px;
     text-align: left;
-    font-weight: 700;
+    font-weight: 400;
 }
 .x-grid {
-    border-top: 1px solid #CECECE;
 }
 .x-grid tbody tr td
 {
@@ -16,7 +15,7 @@
 .x-grid tbody tr td .iconfont {
     font-size: 16px;
     margin: 0 2px;
-    font-weight: 400;
+    color: #666;
 }
 .x-grid tbody tr td.ckbox {
     width: 16px;
@@ -60,7 +59,7 @@
     background-color: #ffc;
 }
 .x-grid tbody tr.disable {
-    background: #e1e1e1;
+    background: rgba(235, 235, 228, .55);
     opacity: .80;
     color: #222;
     font-weight: 200;

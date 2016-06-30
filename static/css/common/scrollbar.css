@@ -1,7 +1,11 @@
-.t-b-r::-webkit-scrollbar { width: 10px; height: 0; background-color: transparent; }
-.t-b-r::-webkit-scrollbar-button { height:0;  background-color: transparent; }
-.t-b-r::-webkit-scrollbar-track {  background-color: transparent; }
-.t-b-r::-webkit-scrollbar-track-piece { background-color: transparent; }
-.t-b-r::-webkit-scrollbar-thumb { height: 0; background-color: rgba(255,255,255,.4); }
-.t-b-r::-webkit-scrollbar-corner { background-color: transparent; }
-.t-b-r::-webkit-resizer { background-color: transparent;}
+.t-cnt::-webkit-scrollbar { width: 10px; height: 10px; background-color: transparent; }
+.t-cnt::-webkit-scrollbar-button { height:0;  background-color: transparent; }
+.t-cnt::-webkit-scrollbar-track {  background-color: transparent; }
+.t-cnt::-webkit-scrollbar-track-piece { background-color: transparent; }
+.t-cnt::-webkit-scrollbar-thumb { height: 0; 
+    //background-color: rgba(255,255,255,.4);
+    background-color: #cecece;
+}
+.t-cnt::-webkit-scrollbar-corner { background-color: transparent; }
+.t-cnt::-webkit-resizer { background-color: transparent;}
+
