@@ -119,6 +119,7 @@ define(function(require, exports, module) {
 
     function _bind_event(o) {
         var ctn = o.ctn;
+
         /*添加*/
         ctn.find('.l-add')
             .click(function() {
