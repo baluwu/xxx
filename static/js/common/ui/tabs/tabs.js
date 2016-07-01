@@ -2,7 +2,6 @@
 
 define(function(require, exports, module) {
     var $ = require('jquery');
-    var locStore = require('lib/store/local-storage');
  
     /* 构造函数
      * @param data 
@@ -68,9 +67,20 @@ define(function(require, exports, module) {
         );
     }
 
-    function _bind_close(item) {
+    function _bind_close(item, o) {
         item.unbind('click').click(function() {
-            item.parent().remove();
+
+            var tab_item = item.parent();
+            var act_item = tab_item.next();
+            var is_active = tab_item.hasClass(o.cfg.active_class);
+
+            if (!act_item) act_item = tab_item.prev();
+
+            tab_item.remove();
+            if (is_active) {
+                act_item.addClass(o.cfg.active_class);
+                _load_content(act_item, $('.' + o.cfg.ctt_container));
+            }
         });
     }
 
@@ -89,32 +99,40 @@ define(function(require, exports, module) {
      *  @param oCten {Object} tab页内容的容器
      */
     function _load_content(item, oCtn) {
-        var key = item.attr('data-id');
-        var content = locStore.get(key);
-        var url = item.attr('data-url');
 
-        if (!url) return oCtn.html('');
-        
-        var color = _get_rd_color();
-
-        item.css({borderTopColor: color});
-
-        if (content) 
-            oCtn.html(content);           
-        else {
-            $.ajax({
-                method: 'GET',
-                dataType: 'html',
-                url: url
-            }).then(function(r) {
-                oCtn.html(r);           
-                locStore.set(
-                    item.attr('data-id'), r
-                );
-            }).catch(function(err) {
-                oCtn.html(err.responseText);
-            })
+        if (!window.LLS) { 
+            return alert('您当前的设置未开启本地大容量存储, 请您开启再使用本系统!'); 
         }
+
+        var key = item.attr('data-id');
+
+        LLS.getContents(key).then(function(content) {
+            
+            var url = item.attr('data-url');
+
+            if (!url) return oCtn.html('');
+            
+            var color = _get_rd_color();
+
+            item.css({borderTopColor: color});
+
+            if (content) 
+                oCtn.html(content);           
+            else {
+                $.ajax({
+                    method: 'GET',
+                    dataType: 'html',
+                    url: url
+                }).then(function(r) {
+                    oCtn.html(r);           
+                    LLS.setContents(
+                        item.attr('data-id'), r
+                    );
+                }).catch(function(err) {
+                    oCtn.html(err.responseText);
+                })
+            }
+        });
     }
 
     function _bind_event(o) {
@@ -128,7 +146,7 @@ define(function(require, exports, module) {
 
         /*关闭*/
         ctn.find('.icon-guanbi1').each(function(i, el) {
-            _bind_close($(el));
+            _bind_close($(el), o);
             this.cnt--;
         });
 
